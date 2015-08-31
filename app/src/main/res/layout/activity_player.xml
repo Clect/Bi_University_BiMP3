@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.edward.std0.player"
+    android:background="#ffffff">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/bottom_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        />
+
+    <ImageButton
+        android:background="@drawable/play"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_play"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-65dp"
+        android:onClick="OnClk_btn_play" />
+
+    <ImageButton
+        android:background="@drawable/next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_next"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@+id/btn_play"
+        android:layout_toEndOf="@+id/btn_play"
+        android:layout_alignTop="@+id/btn_play"
+        android:onClick="OnClk_btn_next" />
+
+    <ImageButton
+        android:background="@drawable/last"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn_last"
+        android:layout_alignTop="@+id/btn_play"
+        android:layout_toLeftOf="@+id/btn_play"
+        android:layout_toStartOf="@+id/btn_play"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="OnClk_btn_last" />
+
+
+    <ListView
+        android:cacheColorHint="#000"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/list"
+        android:layout_alignBottom="@+id/seekBar"
+        android:layout_below="@+id/imageView2" />
+
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_above="@+id/imageView"
+        android:onClick="OnClk_Seekbar" />
+
+    <ImageButton
+        android:background="@drawable/doc"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:id="@+id/doc"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginRight="22dp"
+        />
+    <ImageButton
+        android:background="@drawable/repeat"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:id="@+id/repeat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="22dp"
+        android:layout_marginLeft="22dp"
+        android:onClick="OnClk_btn_repeat" />
+
+    <ImageView
+        android:background="@drawable/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+         />
+
+    <ImageButton
+        android:background="@drawable/back"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_back"
+        android:onClick="OnClk_btn_back"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artist"
+        android:layout_above="@+id/list"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff"
+        android:textSize="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/playing_song"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:text="Loading..."
+        android:layout_above="@+id/artist"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
